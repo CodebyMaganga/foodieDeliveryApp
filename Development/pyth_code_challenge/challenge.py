@@ -20,12 +20,24 @@ class Customer(Person):
         self.reviews.append(new_review)
         restaurant.add_review(new_review)
 
-    def restaurants(self):
-        return list({review.restaurant for review in self.reviews})
+    def num_reviews(self):
+        return len(self.reviews)
 
     @classmethod
-    def all(cls):
-        return cls.all_customers
+    def find_by_name(cls, name):
+        for customer in cls.all_customers:
+            if customer.full_name() == name:
+                return customer
+        return None
+
+    @classmethod
+    def find_all_by_given_name(cls, name):
+        matching_customers = []
+        for customer in cls.all_customers:
+            if customer.first_name == name:
+                matching_customers.append(customer)
+        return matching_customers
+
 
 
 
