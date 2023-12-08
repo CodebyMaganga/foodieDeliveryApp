@@ -1,0 +1,69 @@
+.hero-container {
+  height: 70vh;
+  background-image: url("../images/burger2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text-box {
+  transform: translate(5%, 30%);
+}
+
+.text-box > h2 {
+  text-transform: capitalize;
+}
+
+.iconvisuals > img {
+  height: 70px;
+}
+
+@media screen and (max-width: 968px) {
+  .hero-container {
+    display: grid;
+    place-items: center;
+    max-width: 100%;
+    padding: 0; /* Reset padding if needed */
+    margin: 0;
+  }
+
+  .text-box {
+    max-width: 65%;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .info-section,
+  .menu-today,
+  .about-us,
+  .header,
+  .person {
+    display: grid;
+    place-items: center;
+  }
+  .iconvisuals {
+    margin-bottom: 45px;
+  }
+
+  .card {
+    max-width: 55%;
+  }
+
+  .header,
+  .chef-menu {
+    font-size: 3rem;
+  }
+
+  .about-us {
+    display: block;
+    height: 100%;
+  }
+
+  .person {
+    margin-bottom: 30px;
+    border-style: none;
+  }
+
+  .person > p {
+    max-width: 40%;
+  }
+}
